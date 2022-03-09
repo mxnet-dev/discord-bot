@@ -17,10 +17,11 @@ async def on_raw_reaction_add(payload):
             channel = bot.get_channel(int(CHANNELID))
             message = await channel.fetch_message(payload.message_id)
             reaction = get(message.reactions, emoji=payload.emoji.name)
+            author = message.author
             if reaction and reaction.count > 0:
                 await message.edit(suppress=True)
                 await message.clear_reaction("✅")
-                await message.reply("Container Updated on <:portainer:949513858106671124>", mention_author=False)
+                await message.reply("Container Updated on <:portainer:949513858106671124> by "+str(author.display_name), mention_author=False)
                 await message.add_reaction("<:portainer:949513858106671124>")
 
 bot.run(TOKEN)
