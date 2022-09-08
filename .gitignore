@@ -3,3 +3,4 @@
 **/dev
 *.NO
 *.backup
+.DS_Store
