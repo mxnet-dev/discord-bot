@@ -5,7 +5,9 @@ from discord.utils import get
 TOKEN = os.environ['DISCORD_TOKEN']
 CHANNELID = os.environ['DISCORD_CHANNEL']
 
-bot = discord.Client()
+intents = discord.Intents.default()
+
+bot = discord.Client(intents=intents)
 
 @bot.event
 async def on_ready():
