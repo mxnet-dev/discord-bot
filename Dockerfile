@@ -1,10 +1,10 @@
-FROM python:3.10.6-slim-buster
+FROM python:3.11.2-slim-buster
 
 RUN mkdir -p /usr/src/bot
 WORKDIR /usr/src/bot
 
 COPY . .
 
-RUN python3 -m pip install discord.py
+RUN python3 -m pip install --no-cache-dir discord.py
 
 CMD [ "python3", "discord_bot.py" ]
