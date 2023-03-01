@@ -4,3 +4,5 @@
 *.NO
 *.backup
 .DS_Store
+
+.devcontainer
