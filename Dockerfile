@@ -1,4 +1,4 @@
-FROM python:3.11.2-slim-buster
+FROM python:3.12.0a7-slim-buster
 
 RUN mkdir -p /usr/src/bot
 WORKDIR /usr/src/bot
