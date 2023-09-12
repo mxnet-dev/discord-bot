@@ -24,7 +24,7 @@ jobs:
 
       - name: Docker Metadata
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           github-token: ${{ github.token }}
           images: thehedgefrog/discord-bot,ghcr.io/mxnet-dev/discord-bot
